@@ -2,7 +2,7 @@ import asyncio
 from playwright.async_api import async_playwright
 import json
 import fnmatch
-from config import Config
+from web_crawler.config import Config
 
 
 # Function to get page HTML
