@@ -1,6 +1,6 @@
-import os,torch
+import torch
 from groq import Groq
-from model_setup import ModelSetup
+from GuardsSetup.model_setup import ModelSetup
 # from dotenv import load_dotenv
 
 # load_dotenv(dotenv_path=".env")

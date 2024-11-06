@@ -23,3 +23,10 @@ streamlit
 chromadb==0.3.29 
 chroma-hnswlib==0.7.3
 openpyxl
+accelerate
+tiktoken
+huggingface_hub
+torch
+cuda
+transformers
+bitsandbytes
