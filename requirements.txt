@@ -27,6 +27,5 @@ accelerate
 tiktoken
 huggingface_hub
 torch
-cuda
 transformers
 bitsandbytes
