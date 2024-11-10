@@ -2,21 +2,12 @@ import streamlit as st
 from dotenv import load_dotenv
 import os
 
-# Langchain Imports
-from langchain_groq import ChatGroq
-from langchain_core.messages import HumanMessage
-  
-from langchain_community.embeddings import HuggingFaceBgeEmbeddings
-from langchain.prompts import PromptTemplate
-from langchain.schema import Document as LangChainDocument
-
-
 # Other imports
 import chromadb
 import time
 
 # LlamaIndex imports
-from llama_index.core import Settings as LlamaSettings, SummaryIndex, VectorStoreIndex, Document as LlamaDocument
+from llama_index.core import SummaryIndex, VectorStoreIndex, Document as LlamaDocument
 from llama_index.llms.groq import Groq
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core.node_parser import SentenceSplitter
@@ -43,27 +34,14 @@ if groq_api_key is None:
 # Initialize components
 folder_path = "db"
 chat_history = []
-cached_llm = ChatGroq(model_name="llama3-8b-8192")
-embedding = HuggingFaceBgeEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 #Initialize the Guard.
 guard = GuardRail(model_name="llama-guard-3-8b",groq_api_key=groq_api_key,run_model_locally=False)
 
-# LlamaIndex settings
-LlamaSettings.llm = Groq(api_key=groq_api_key, model="llama3-8b-8192")
-LlamaSettings.embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
+# LlamaIndex LLM and Embed Model.
 
-raw_prompt = PromptTemplate(
-    input_variables=["input", "context"],
-    template="""
-    You are a helpful assistant that provides information based on the given context. 
-    If the information is not in the context, politely say that you don't have that information.
-    
-    Context: {context}
-    
-    Human: {input}
-    Assistant: """
-)
+llm = Groq(api_key=groq_api_key, model="llama3-8b-8192")
+embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 
 def convert_to_llama_documents(data):
@@ -78,12 +56,7 @@ def convert_to_llama_documents(data):
             llama_documents.append(llama_doc)
     elif isinstance(data, list):
         for doc in data:
-            if isinstance(doc, LangChainDocument):
-                llama_doc = LlamaDocument(
-                    text=doc.page_content,
-                    metadata=doc.metadata
-                )
-            elif isinstance(doc, LlamaDocument):
+            if isinstance(doc, LlamaDocument):
                 llama_doc = doc
             else:
                 raise ValueError(f"Unsupported document type: {type(doc)}")
@@ -97,13 +70,16 @@ def create_query_router(documents):
     nodes = splitter.get_nodes_from_documents(documents)
 
     summary_index = SummaryIndex(nodes)
-    vector_index = VectorStoreIndex(nodes)
+
+    vector_index = VectorStoreIndex(nodes=nodes,
+                                    embed_model=embed_model)
 
     summary_query_engine = summary_index.as_query_engine(
+        llm=llm,
         response_mode="tree_summarize",
         use_async=True,
     )
-    vector_query_engine = vector_index.as_query_engine()
+    vector_query_engine = vector_index.as_query_engine(llm=llm)
 
     summary_tool = QueryEngineTool.from_defaults(
         query_engine=summary_query_engine,
@@ -115,11 +91,12 @@ def create_query_router(documents):
     )
 
     query_engine = RouterQueryEngine(
-        selector=LLMSingleSelector.from_defaults(),
+        selector=LLMSingleSelector.from_defaults(llm=llm),
         query_engine_tools=[
             summary_tool,
             vector_tool,
         ],
+        llm=llm,
         verbose=True
     )
 
@@ -134,12 +111,12 @@ def get_chatbot_response(query, chat_history, documents=None):
     else:
         chat_history_str = ''.join([f"{m['role'].capitalize()}: {m['content']}\n" for m in chat_history])
         full_prompt = f"Chat History:\n{chat_history_str}Human: {query}\nAI:"
-        response = cached_llm.invoke([HumanMessage(content=full_prompt)])
-        return response.content
+        #Use Llama Index llm, instead of Langchain one.
+        response = llm.complete(prompt=full_prompt)
+        return str(response)
     
 def initialize_chroma_client():
     return chromadb.Client()
-
 
 def main():
     # Create necessary folders
@@ -209,6 +186,7 @@ def handle_add_document():
                 # chroma_client = chromadb.Client(Settings(persist_directory=folder_path, anonymized_telemetry=False))
                 collection = st.session_state.chroma_client.get_or_create_collection(name="my_collection")
 
+                print(f'Chunks: {[chunk.page_content for chunk in chunks]}')
                 # Add documents to the collection
                 collection.add(
                     documents=[chunk.page_content for chunk in chunks],
