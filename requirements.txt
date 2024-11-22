@@ -29,3 +29,4 @@ huggingface_hub
 torch
 transformers
 bitsandbytes
+fastchat

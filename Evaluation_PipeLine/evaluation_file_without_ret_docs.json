@@ -1,0 +1,392 @@
+[
+    {
+        "question": "What architecture is the `tokenizers-linux-x64-musl` binary designed for?\n",
+        "true_answer": "x86_64-unknown-linux-musl",
+        "source_doc": "huggingface/tokenizers/blob/main/bindings/node/npm/linux-x64-musl/README.md",
+        "generated_answer": "x86_64"
+    },
+    {
+        "question": "What is the purpose of the BLIP-Diffusion model?\n",
+        "true_answer": "The BLIP-Diffusion model is designed for controllable text-to-image generation and editing.",
+        "source_doc": "huggingface/diffusers/blob/main/docs/source/en/api/pipelines/blip_diffusion.md",
+        "generated_answer": "There is no mention of the BLIP-Diffusion model in the provided context. The context only talks about Stable Diffusion, Latent Diffusion, and Diffusers, but not BLIP-Diffusion."
+    },
+    {
+        "question": "How can a user claim authorship of a paper on the Hugging Face Hub?\n",
+        "true_answer": "By clicking their name on the corresponding Paper page and clicking \"claim authorship\", then confirming the request in paper settings for admin team validation.",
+        "source_doc": "huggingface/hub-docs/blob/main/docs/hub/paper-pages.md",
+        "generated_answer": "If your paper is not linked to your account, you can click in your name in the corresponding Paper page and click \"claim authorship\". This will automatically re-direct to your paper settings where you can confirm the request."
+    },
+    {
+        "question": "What is the purpose of the /healthcheck endpoint in the Datasets server API?\n",
+        "true_answer": "Ensure the app is running",
+        "source_doc": "huggingface/datasets-server/blob/main/services/api/README.md",
+        "generated_answer": "Ensure the app is running."
+    },
+    {
+        "question": "What is the default context window size for Local Attention in the LongT5 model?\n",
+        "true_answer": "127 tokens",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/model_doc/longt5.md",
+        "generated_answer": "127"
+    },
+    {
+        "question": "What method is used to load a checkpoint for a task using `AutoPipeline`?\n",
+        "true_answer": "from_pretrained()",
+        "source_doc": "huggingface/diffusers/blob/main/docs/source/en/api/pipelines/auto_pipeline.md",
+        "generated_answer": "The method used to load a checkpoint for a task using `AutoPipeline` is `from_pretrained()`."
+    },
+    {
+        "question": "What is the purpose of Diffusers library?\n",
+        "true_answer": "To serve as a modular toolbox for both inference and training of state-of-the-art pretrained diffusion models across multiple modalities.",
+        "source_doc": "huggingface/diffusers/blob/main/docs/source/en/conceptual/philosophy.md",
+        "generated_answer": "The purpose of the Diffusers library is to provide a lightweight, easy-to-use, and contributor-friendly package for diffusion-based machine learning models, with a focus on usability and simplicity over performance and abstraction."
+    },
+    {
+        "question": "What method does the EulerAncestralDiscreteScheduler use for sampling?\n",
+        "true_answer": "Ancestral sampling with Euler method steps.",
+        "source_doc": "huggingface/diffusers/blob/main/docs/source/en/api/schedulers/euler_ancestral.md",
+        "generated_answer": "Ancestral sampling with Euler method steps."
+    },
+    {
+        "question": "What is the name of the large multimodal model that can solve image-text tasks and is based on Flamingo?\n",
+        "true_answer": "IDEFICS",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/tasks/idefics.md",
+        "generated_answer": "IDEFICS"
+    },
+    {
+        "question": "What is the purpose of the `gradio.Blocks` API?\n",
+        "true_answer": "The `gradio.Blocks` API allows you to have full control over the data flows and layout of your application, enabling the building of complex, multi-step applications.",
+        "source_doc": "huggingface/course/blob/main/chapters/en/chapter9/7.mdx",
+        "generated_answer": "The purpose of the `gradio.Blocks` API is to provide a low-level API that allows for full control over the data flows and layout of a Gradio application, enabling the creation of complex, multi-step applications with flexible data flows."
+    },
+    {
+        "question": "What is the purpose of the two-stage model proposed in the paper \"Hierarchical Text-Conditional Image Generation with CLIP Latents\"?\n",
+        "true_answer": "The purpose of the two-stage model is to generate a CLIP image embedding given a text caption and then generate an image conditioned on the image embedding.",
+        "source_doc": "huggingface/diffusers/blob/main/docs/source/en/api/pipelines/unclip.md",
+        "generated_answer": "The query does not provide any information about a two-stage model proposed in a paper, nor does it mention CLIP Latents. The provided context information appears to be a collection of documentation pages from Hugging Face, covering various topics such as diffusion models, image generation, and CLIP. Therefore, it is not possible to answer the query based on the provided context."
+    },
+    {
+        "question": "What command is used to install the requirements for a research project using 🤗 Transformers?\n",
+        "true_answer": "pip install -r requirements.txt",
+        "source_doc": "huggingface/transformers/blob/main/examples/research_projects/README.md",
+        "generated_answer": "pip install -r requirements.txt"
+    },
+    {
+        "question": "What task does the `roberta-large-mnli` checkpoint perform?\n",
+        "true_answer": "Text classification",
+        "source_doc": "huggingface/course/blob/main/chapters/en/chapter1/10.mdx",
+        "generated_answer": "Based on the context, it seems that the `roberta-large-mnli` checkpoint is used for question-answering tasks."
+    },
+    {
+        "question": "What service is replacing the Paid tier of the Inference API at Hugging Face?\n",
+        "true_answer": "Inference Endpoints",
+        "source_doc": "huggingface/blog/blob/main/pricing-update.md",
+        "generated_answer": "Inference Endpoints."
+    },
+    {
+        "question": "What architectural feature does SqueezeBERT use instead of fully-connected layers for the Q, K, V, and FFN layers?\n",
+        "true_answer": "Grouped convolutions",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/model_doc/squeezebert.md",
+        "generated_answer": "The query is not related to the provided context information. The context information discusses various architectures, including MoE, Diffusion, and Transformers, but does not mention SqueezeBERT. Therefore, it is not possible to answer the query based on the provided context information."
+    },
+    {
+        "question": "What type of license is the HuggingFace Team's software distributed under?\n",
+        "true_answer": "Apache License, Version 2.0",
+        "source_doc": "huggingface/simulate/blob/main/docs/source/tutorials/interaction.mdx",
+        "generated_answer": "The HuggingFace Team's software is distributed under the Apache License, Version 2.0."
+    },
+    {
+        "question": "What are the two parameter-reduction techniques proposed in the ALBERT model to lower memory consumption and increase training speed?\n",
+        "true_answer": "Splitting the embedding matrix into two smaller matrices and using repeating layers split among groups.",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/model_doc/albert.md",
+        "generated_answer": "ALBERT reduces memory consumption by lowering the number of parameters in two ways: separating the larger vocabulary embedding into two smaller matrices and allowing layers to share parameters."
+    },
+    {
+        "question": "What are the three main steps for fine-tuning a model with the 🤗 Datasets library?\n",
+        "true_answer": "1. Load a dataset from the Hugging Face Hub. 2. Preprocess the data with `Dataset.map()`. 3. Load and compute metrics.",
+        "source_doc": "huggingface/course/blob/main/chapters/en/chapter5/1.mdx",
+        "generated_answer": "Load a dataset from the Hugging Face Hub, preprocess the data with `Dataset.map()`, and load and compute metrics."
+    },
+    {
+        "question": "What is the maximum improvement in throughput achieved by Hugging Face Infinity compared to vanilla transformers?\n",
+        "true_answer": "+800%",
+        "source_doc": "huggingface/blog/blob/main/infinity-cpu-performance.md",
+        "generated_answer": "The maximum improvement in throughput achieved by Hugging Face Infinity compared to vanilla transformers is not explicitly stated in the provided context. However, it is mentioned that Hugging Face Infinity offers a containerized solution that makes it easy to deploy low-latency, high-throughput, hardware-accelerated inference pipelines for the most popular Transformer models. This implies that Hugging Face Infinity can achieve significant improvements in throughput compared to vanilla transformers, but the exact magnitude of the improvement is not provided."
+    },
+    {
+        "question": "What is the command to upload a spaCy pipeline to the Hugging Face Hub?\n",
+        "true_answer": "python -m spacy huggingface-hub push en_ner_fashion-0.0.0-py3-none-any.whl",
+        "source_doc": "huggingface/blog/blob/main/spacy.md",
+        "generated_answer": "The command to upload a spaCy pipeline to the Hugging Face Hub is:\n\n```\npython -m spacy huggingface-hub push [whl_path] [--org] [--msg] [--local-repo] [--verbose]\n```\n\nWhere `[whl_path]` is the path to the `.whl` file packaged with `spacy package`."
+    },
+    {
+        "question": "What is the time and memory complexity of the Nyströmformer's approximation of self-attention?\n",
+        "true_answer": "O(n)",
+        "source_doc": "huggingface/blog/blob/main/nystromformer.md",
+        "generated_answer": "The time and memory complexity of the Nyströmformer's approximation of self-attention is O(n)."
+    },
+    {
+        "question": "What is the goal of the Named Entity Recognition task in token classification?\n",
+        "true_answer": "The goal of the Named Entity Recognition task is to find the entities in a piece of text, such as person, location, or organization.",
+        "source_doc": "huggingface/course/blob/main/subtitles/en/raw/tasks.md",
+        "generated_answer": "The goal of the Named Entity Recognition task in token classification is to find the entities in a piece of text, such as person, location, or organization."
+    },
+    {
+        "question": "What is the resolution of images used by the CLIPSeg model?\n",
+        "true_answer": "352 x 352 pixels",
+        "source_doc": "huggingface/blog/blob/main/clipseg-zero-shot.md",
+        "generated_answer": "Based on the provided context, the resolution of images used by the CLIPSeg model is not explicitly mentioned. However, we can infer that the model is designed to work with images of varying resolutions, as it is mentioned that the model is capable of classifying images without annotations."
+    },
+    {
+        "question": "What can you use Gradio for?\n",
+        "true_answer": "Create a demo for your machine learning model, share your machine learning model with others, and debug your model.",
+        "source_doc": "huggingface/course/blob/main/chapters/en/chapter9/9.mdx",
+        "generated_answer": "You can use Gradio to quickly build a demo or web application for your machine learning model, API, or any arbitrary Python function."
+    },
+    {
+        "question": "What TensorFlow API function is used to load a saved tensor file?\n",
+        "true_answer": "safetensors.tensorflow.load_file",
+        "source_doc": "huggingface/safetensors/blob/main/docs/source/api/tensorflow.mdx",
+        "generated_answer": "The TensorFlow API function used to load a saved tensor file is `safetensors.tensorflow.load_file`."
+    },
+    {
+        "question": "Where can you access the logs of your Endpoints in Hugging Face Endpoints?\n",
+        "true_answer": "In the \"Logs\" tab of your Endpoint through the UI.",
+        "source_doc": "huggingface/hf-endpoints-documentation/blob/main/docs/source/guides/logs.mdx",
+        "generated_answer": "You can access the logs of your Endpoints in the \"Logs\" tab of your Endpoint in the UI."
+    },
+    {
+        "question": "What is the latest task added to Hugging Face AutoTrain for Computer Vision?\n",
+        "true_answer": "Image Classification",
+        "source_doc": "huggingface/blog/blob/main/autotrain-image-classification.md",
+        "generated_answer": "Based on the provided context information, the latest task added to Hugging Face AutoTrain for Computer Vision is not explicitly mentioned. However, the context does mention that Hugging Face has been focusing on computer vision over the last year and has added 8 core vision tasks, including image classification, image segmentation, object detection, and more."
+    },
+    {
+        "question": "What is the default repository type created by the `create_repo` function on Hugging Face Hub?\n",
+        "true_answer": "model",
+        "source_doc": "huggingface/huggingface_hub/blob/main/docs/source/en/guides/repository.md",
+        "generated_answer": "The default repository type created by the `create_repo` function on Hugging Face Hub is a model repository."
+    },
+    {
+        "question": "How many splits does the \"duorc\" dataset have?\n",
+        "true_answer": "Six",
+        "source_doc": "huggingface/datasets-server/blob/main/docs/source/splits.mdx",
+        "generated_answer": "The \"duorc\" dataset has 3 splits: \"train\", \"validation\", and \"test\"."
+    },
+    {
+        "question": "What is the purpose of Fully Sharded Data Parallel (FSDP) in distributed training?\n",
+        "true_answer": "FSDP is developed for distributed training of large pretrained models up to 1T parameters by sharding the model parameters, gradients, and optimizer states across data parallel processes.",
+        "source_doc": "huggingface/peft/blob/main/docs/source/accelerate/fsdp.md",
+        "generated_answer": "FSDP is developed for distributed training of large pretrained models up to 1T parameters."
+    },
+    {
+        "question": "What file format is used to save and store PyTorch model weights more securely than `.bin` files?\n",
+        "true_answer": "`.safetensors`",
+        "source_doc": "huggingface/safetensors/blob/main/docs/source/convert-weights.md",
+        "generated_answer": "The file format used to save and store PyTorch model weights more securely than `.bin` files is `safetensors`."
+    },
+    {
+        "question": "What type of security certification does Hugging Face have?\n",
+        "true_answer": "SOC2 Type 2 certified",
+        "source_doc": "huggingface/hub-docs/blob/main/docs/hub/security.md",
+        "generated_answer": "CNIL (French Data Protection Authority) Enhanced Support program."
+    },
+    {
+        "question": "What do RAG models combine to generate outputs?\n",
+        "true_answer": "Pretrained dense retrieval (DPR) and sequence-to-sequence models.",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/model_doc/rag.md",
+        "generated_answer": "RAG models combine the powers of pretrained dense retrieval (DPR) and Seq2Seq models."
+    },
+    {
+        "question": "What library does MarkupLMFeatureExtractor use to extract data from HTML and XML files?\n",
+        "true_answer": "Beautiful Soup",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/model_doc/markuplm.md",
+        "generated_answer": "Beautiful Soup."
+    },
+    {
+        "question": "What is the file size limit for syncing to HF Spaces without using Git-LFS?\n",
+        "true_answer": "10MB",
+        "source_doc": "huggingface/hub-docs/blob/main/docs/hub/spaces-github-actions.md",
+        "generated_answer": "10MB"
+    },
+    {
+        "question": "What is the title of the paper introducing the ByT5 model?\n",
+        "true_answer": "ByT5: Towards a token-free future with pre-trained byte-to-byte models",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/model_doc/byt5.md",
+        "generated_answer": "There is no mention of the ByT5 model in the provided context information."
+    },
+    {
+        "question": "What is the dimension of the feature vector for the base BERT model?\n",
+        "true_answer": "768",
+        "source_doc": "huggingface/course/blob/main/subtitles/en/raw/chapter1/05_encoders.md",
+        "generated_answer": "768"
+    },
+    {
+        "question": "What special identifier does the WordPiece Model use for continuing subwords?\n",
+        "true_answer": "##",
+        "source_doc": "huggingface/tokenizers/blob/main/docs/source-doc-builder/components.mdx",
+        "generated_answer": "The special identifier used by the WordPiece Model for continuing subwords is the `##` prefix."
+    },
+    {
+        "question": "What is the purpose of the 🧨 Diffusers tutorials?\n",
+        "true_answer": "To provide a gentle introduction to diffusion models and help understand the library fundamentals.",
+        "source_doc": "huggingface/diffusers/blob/main/docs/source/en/tutorials/tutorial_overview.md",
+        "generated_answer": "The purpose of the 🧨 Diffusers tutorials is to support novel applications and usages of the Diffusers library by adding experimental code."
+    },
+    {
+        "question": "What is the default setting for the `allow_flagging` parameter in Gradio's `Interface`?\n",
+        "true_answer": "\"manual\"",
+        "source_doc": "gradio-app/gradio/blob/main/guides/cn/07_other-tutorials/using-flagging.md",
+        "generated_answer": "The default setting for the `allow_flagging` parameter in Gradio's `Interface` is `\"manual\"`."
+    },
+    {
+        "question": "Where can the full code for the Stable Diffusion demo be found?\n",
+        "true_answer": "https://hf.co/spaces/stabilityai/stable-diffusion/tree/main",
+        "source_doc": "gradio-app/gradio/blob/main/demo/stable-diffusion/DESCRIPTION.md",
+        "generated_answer": "The full code for the Stable Diffusion demo can be found on the [CompVis](https://huggingface.co/CompVis) and [Stability AI](https://huggingface.co/stabilityai) Hub organizations, as well as on the [Runway](https://huggingface.co/runwayml) Hub organization."
+    },
+    {
+        "question": "What transformation does the FNet model use to replace the self-attention layer in a BERT model?\n",
+        "true_answer": "Fourier transform",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/model_doc/fnet.md",
+        "generated_answer": "The FNet model uses a standard, unparameterized Fourier Transform to replace the self-attention layer in a BERT model."
+    },
+    {
+        "question": "What type of test should typically accompany a bug fix in Gradio's testing strategy?\n",
+        "true_answer": "Dynamic code test",
+        "source_doc": "gradio-app/gradio/blob/main/test-strategy.md",
+        "generated_answer": "A dynamic code test."
+    },
+    {
+        "question": "How can you force mixed precision training when initializing the Accelerator in 🤗 Accelerate?\n",
+        "true_answer": "By passing `fp16=True` to the Accelerator init.",
+        "source_doc": "huggingface/blog/blob/main/accelerate-library.md",
+        "generated_answer": "You can force mixed precision training when initializing the Accelerator in 🤗 Accelerate by passing `fp16=True` to the `Accelerator` constructor."
+    },
+    {
+        "question": "What is the purpose of tokenizers in the NLP pipeline?\n",
+        "true_answer": "To translate text into data that can be processed by the model.",
+        "source_doc": "huggingface/course/blob/main/chapters/en/chapter2/4.mdx",
+        "generated_answer": "Tokenizers are used to split strings into sub-word token strings, convert token strings to ids, and encode/decode strings. They also manage special tokens, such as mask, beginning-of-sentence, etc., and add new tokens to the vocabulary in a way that is independent of the underlying structure."
+    },
+    {
+        "question": "What is the purpose of the Safety Checker in the Diffusers library?\n",
+        "true_answer": "The Safety Checker checks and compares the class probability of a set of hard-coded harmful concepts in the embedding space against an image after it has been generated to mitigate the risk of generating harmful content.",
+        "source_doc": "huggingface/diffusers/blob/main/docs/source/en/conceptual/ethical_guidelines.md",
+        "generated_answer": "The Safety Checker is a component that flags inappropriate content generated during inference. Its purpose is to help users interact with generative models responsibly and ethically by detecting and preventing the production of harmful and NSFW content."
+    },
+    {
+        "question": "What Python class allows you to retrieve Discussions and Pull Requests from a given repository on the Hugging Face Hub?\n",
+        "true_answer": "HfApi",
+        "source_doc": "huggingface/huggingface_hub/blob/main/docs/source/en/guides/community.md",
+        "generated_answer": "The `HfApi` class allows you to retrieve Discussions and Pull Requests from a given repository on the Hugging Face Hub."
+    },
+    {
+        "question": "What is the name of the new library introduced by Hugging Face for hosting scikit-learn models?\n",
+        "true_answer": "Skops",
+        "source_doc": "huggingface/blog/blob/main/skops.md",
+        "generated_answer": "Skops"
+    },
+    {
+        "question": "What is the purpose of Textual Inversion?\n",
+        "true_answer": "Textual Inversion is a training method for personalizing models by learning new text embeddings from a few example images.",
+        "source_doc": "huggingface/diffusers/blob/main/docs/source/en/api/loaders/textual_inversion.md",
+        "generated_answer": "Textual Inversion is a training technique for personalizing image generation models with just a few example images of what you want it to learn."
+    },
+    {
+        "question": "What is the recommended multiple of batch size for fp16 data type on an A100 GPU?\n",
+        "true_answer": "64",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/perf_train_gpu_one.md",
+        "generated_answer": "For fp16 data type on an A100 GPU, a multiple of 64 is recommended."
+    },
+    {
+        "question": "How do you run a Gradio Blocks app in reload mode using a Python IDE?\n",
+        "true_answer": "Run `gradio run.py` in the terminal.",
+        "source_doc": "gradio-app/gradio/blob/main/guides/09_other-tutorials/developing-faster-with-reload-mode.md",
+        "generated_answer": "To run a Gradio Blocks app in reload mode using a Python IDE, you can simply type `gradio` before the name of the file instead of `python`. For example, if your file is named `app.py`, you would type `gradio app.py` in your terminal."
+    },
+    {
+        "question": "How can you install the Hugging Face Unity API in your Unity project?\n",
+        "true_answer": "To install the Hugging Face Unity API in your Unity project, go to `Window` -> `Package Manager`, click `+` and select `Add Package from git URL`, then enter `https://github.com/huggingface/unity-api.git`.",
+        "source_doc": "huggingface/blog/blob/main/unity-api.md",
+        "generated_answer": "To install the Hugging Face Unity API in your Unity project, follow these steps:\n\n1. Open your Unity project.\n2. Go to `Window` -> `Package Manager`.\n3. Click `+` and select `Add Package from git URL`.\n4. Enter `https://github.com/huggingface/unity-api.git`.\n5. Once installed, the Unity API wizard should pop up. If not, go to `Window` -> `Hugging Face API Wizard`."
+    },
+    {
+        "question": "What is the pretraining objective of the Wav2Vec2 context network?\n",
+        "true_answer": "The pretraining objective of the Wav2Vec2 context network is a contrastive task where the model has to predict the true quantized speech representation of the masked prediction from a set of false ones.",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/tasks_explained.md",
+        "generated_answer": "The pretraining objective of the Wav2Vec2 context network is masked prediction."
+    },
+    {
+        "question": "What is the default checkpoint used by the sentiment analysis pipeline in the Transformers library?\n",
+        "true_answer": "distilbert base uncased finetuned sst2 english",
+        "source_doc": "huggingface/course/blob/main/subtitles/en/raw/chapter2/02_inside-pipeline-pt.md",
+        "generated_answer": "The default checkpoint used by the sentiment analysis pipeline in the Transformers library is \"distilbert-base-uncased-finetuned-sst-2-english\"."
+    },
+    {
+        "question": "What is the purpose of the notebook \"How to use DeepSpeed to train models with billions of parameters on Habana Gaudi\"?\n",
+        "true_answer": "To show how to use DeepSpeed to pre-train/fine-tune the 1.6B-parameter GPT2-XL for causal language modeling on Habana Gaudi.",
+        "source_doc": "huggingface/optimum/blob/main/docs/source/notebooks.md",
+        "generated_answer": "The purpose of the notebook \"How to use DeepSpeed to train models with billions of parameters on Habana Gaudi\" is to show how to use DeepSpeed to pre-train/fine-tune the 1.6B-parameter GPT2-XL for causal language modeling on Habana Gaudi."
+    },
+    {
+        "question": "What command line module does PyTorch provide to run a script on multiple GPUs?\n",
+        "true_answer": "torchrun",
+        "source_doc": "huggingface/blog/blob/main/pytorch-ddp-accelerate-transformers.md",
+        "generated_answer": "PyTorch provides the `torch.distributed.run` command line module to run a script on multiple GPUs."
+    },
+    {
+        "question": "What is the most popular vision transformer model on the Hugging Face Model Hub for image classification?\n",
+        "true_answer": "google/vit-base-patch16-224",
+        "source_doc": "gradio-app/gradio/blob/main/guides/06_integrating-other-frameworks/image-classification-with-vision-transformers.md",
+        "generated_answer": "Vision Transformer (ViT)"
+    },
+    {
+        "question": "What is the command to upload an ESPnet model to a Hugging Face repository?\n",
+        "true_answer": "./run.sh --stage 15 --skip_upload_hf false --hf_repo username/model_repo",
+        "source_doc": "huggingface/hub-docs/blob/main/docs/hub/espnet.md",
+        "generated_answer": "The command to upload an ESPnet model to a Hugging Face repository is not explicitly mentioned in the provided context. However, based on the information provided, it can be inferred that the `push_to_hub()` method can be used to upload a dataset to the Hugging Face Hub. \n\nTo upload an ESPnet model, you would need to use the `push_to_hub()` method, but you would need to specify the model ID and the repository ID. The exact command would depend on the specific model and repository you are trying to upload."
+    },
+    {
+        "question": "What file should be added to a model repository to install custom Python dependencies for Inference Endpoints?\n",
+        "true_answer": "requirements.txt",
+        "source_doc": "huggingface/hf-endpoints-documentation/blob/main/docs/source/guides/custom_dependencies.mdx",
+        "generated_answer": "A `requirements.txt` file should be added to a model repository to install custom Python dependencies for Inference Endpoints."
+    },
+    {
+        "question": "How many images are needed to teach new concepts to Stable Diffusion using Textual Inversion?\n",
+        "true_answer": "3-5 images",
+        "source_doc": "huggingface/diffusers/blob/main/examples/research_projects/intel_opts/textual_inversion_dfq/README.md",
+        "generated_answer": "According to the context information, 3-5 images are needed to teach new concepts to Stable Diffusion using Textual Inversion."
+    },
+    {
+        "question": "What is the maximum size of a model checkpoint before it is automatically sharded in Transformers version 4.18.0?\n",
+        "true_answer": "10GB",
+        "source_doc": "huggingface/transformers/blob/main/docs/source/en/big_models.md",
+        "generated_answer": "10GB"
+    },
+    {
+        "question": "What is the purpose of Weights and Biases (W&B) for data scientists and machine learning scientists?\n",
+        "true_answer": "To track their machine learning experiments at every stage, from training to production.",
+        "source_doc": "gradio-app/gradio/blob/main/guides/06_integrating-other-frameworks/Gradio-and-Wandb-Integration.md",
+        "generated_answer": "The purpose of Weights and Biases (W&B) is to provide a platform for data scientists and machine learning scientists to track and understand the impact of their choices on the development of their machine learning models, thereby enabling them to better address bias-related risks."
+    },
+    {
+        "question": "What is the name of the open-source library created by Hugging Face to simplify Transformer acceleration?\n",
+        "true_answer": "Optimum",
+        "source_doc": "huggingface/blog/blob/main/intel.md",
+        "generated_answer": "Optimum."
+    },
+    {
+        "question": "What parameter is used to ensure that elements in a row have the same height in Gradio?\n",
+        "true_answer": "equal_height",
+        "source_doc": "gradio-app/gradio/blob/main/guides/cn/03_building-with-blocks/02_controlling-layout.md",
+        "generated_answer": "The `equal_height` argument of the `style` method is used to ensure that elements in a Row have the same height in Gradio."
+    },
+    {
+        "question": "What is the command to install the latest version of Optimum with OpenVINO support?\n",
+        "true_answer": "pip install --upgrade-strategy eager optimum[\"openvino\"]",
+        "source_doc": "huggingface/diffusers/blob/main/docs/source/en/optimization/open_vino.md",
+        "generated_answer": "pip install --upgrade-strategy eager optimum[\"openvino\"]"
+    }
+]
