@@ -104,6 +104,7 @@ class GuardRail:
             return result
         # Using groq with llama-guard for groq cloud inference.
         else:
+            print(self.access_token)
             client = Groq(api_key=self.access_token)
 
             chat_completion = client.chat.completions.create(
