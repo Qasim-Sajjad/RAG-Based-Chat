@@ -22,11 +22,11 @@ sentence-transformers==3.0.1
 streamlit
 chromadb==0.3.29 
 chroma-hnswlib==0.7.3
-openpyxl
-accelerate
-tiktoken
-huggingface_hub
-torch
-transformers
-bitsandbytes
-fastchat
+# openpyxl
+# accelerate
+# tiktoken
+# huggingface_hub
+# torch
+# transformers
+# bitsandbytes
+# fastchat
