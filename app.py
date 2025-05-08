@@ -25,7 +25,7 @@ from utils.doc_loader.dataloader import DataLoader
 load_dotenv()
 
 groq_api_key = st.secrets["GROQ_API_KEY"]
-hf_llama_guard = st.secrets["HF_LLAMA_GUARD"]
+# hf_llama_guard = st.secrets["HF_LLAMA_GUARD"]
 user_agent = "MyCustomAgent/1.0"
 
 if groq_api_key is None:
@@ -41,7 +41,7 @@ guard = GuardRail(model_name="llama-guard-3-8b",groq_api_key=groq_api_key,run_mo
 # LlamaIndex LLM and Embed Model.
 
 llm = Groq(api_key=groq_api_key, model="llama3-8b-8192")
-embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
+embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2",device="cpu")
 
 
 def convert_to_llama_documents(data):

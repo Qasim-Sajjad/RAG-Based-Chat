@@ -1,3 +1,5 @@
 .streamlit/
+.chroma/
+document_storage/
 Evaluation_PipeLine/.env
 Evaluation_PipeLine/index_storage
