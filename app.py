@@ -36,11 +36,11 @@ folder_path = "db"
 chat_history = []
 
 #Initialize the Guard.
-guard = GuardRail(model_name="llama-guard-4-12b",groq_api_key=groq_api_key,run_model_locally=False)
+guard = GuardRail(model_name="meta-llama/llama-guard-4-12b",groq_api_key=groq_api_key,run_model_locally=False)
 
 # LlamaIndex LLM and Embed Model.
 
-llm = Groq(api_key=groq_api_key, model="llama3-8b-8192")
+llm = Groq(api_key=groq_api_key, model="llama-3.1-8b-instant")
 embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2",device="cpu")
 
 
