@@ -36,7 +36,7 @@ folder_path = "db"
 chat_history = []
 
 #Initialize the Guard.
-guard = GuardRail(model_name="llama-guard-3-8b",groq_api_key=groq_api_key,run_model_locally=False)
+guard = GuardRail(model_name="llama-guard-4-12b",groq_api_key=groq_api_key,run_model_locally=False)
 
 # LlamaIndex LLM and Embed Model.
 
