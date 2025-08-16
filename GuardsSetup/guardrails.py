@@ -26,7 +26,7 @@ class GuardRail:
         self.run_locally = run_model_locally
 
         #check validation of model name for both cases.
-        assert model_name in ["meta-llama/LlamaGuard-7b"] if run_model_locally else ["llama-guard-4-12b"] , f"Invalid Model Name:{model_name}"
+        assert model_name in ["meta-llama/LlamaGuard-7b"] if run_model_locally else ["meta-llama/llama-guard-4-12b"] , f"Invalid Model Name:{model_name}"
 
         self.model_id = model_name
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
