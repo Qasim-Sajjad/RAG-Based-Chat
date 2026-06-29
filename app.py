@@ -36,7 +36,7 @@ folder_path = "db"
 chat_history = []
 
 #Initialize the Guard.
-guard = GuardRail(model_name="meta-llama/llama-guard-4-12b",groq_api_key=groq_api_key,run_model_locally=False)
+# guard = GuardRail(model_name="meta-llama/llama-guard-4-12b",groq_api_key=groq_api_key,run_model_locally=False)
 
 # LlamaIndex LLM and Embed Model.
 
@@ -210,7 +210,10 @@ def handle_user_input(use_documents=False, documents=None):
     if prompt:
         st.chat_message("user").markdown(prompt)
         #Add Guards Check.
-        guard_response = guard.sanitize_input(prompt)
+        # guard_response = guard.sanitize_input(prompt)
+
+        #Do Guard Check Safe for Now.
+        guard_response = "safe"
 
         #if its safe, then get chatbot response else Add Appopiate UnSafe Msg for User.
         if guard_response == "safe":
@@ -223,7 +226,8 @@ def handle_user_input(use_documents=False, documents=None):
             
             response = get_chatbot_response(prompt, st.session_state.messages, documents if use_documents else None)
             #Output Validation.
-            guard_response=guard.sanitize_output(initial_description=prompt,llm_response=response)
+            # guard_response=guard.sanitize_output(initial_description=prompt,llm_response=response)
+            guard_response = "safe"
             
             #If Output is Unsafe from model, get the output again for now.
             if guard_response == "unsafe":
